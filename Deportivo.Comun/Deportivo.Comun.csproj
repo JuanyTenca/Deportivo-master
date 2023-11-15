@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IRepositorioCanchas.cs" />
+    <Compile Include="Interfaces\IRepositorioEmpleados.cs" />
     <Compile Include="Interfaces\IRepositorioLocalidades.cs" />
+    <Compile Include="Interfaces\IRepositorioRoles.cs" />
     <Compile Include="Interfaces\IRepositorioSocios.cs" />
     <Compile Include="IUnitofWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

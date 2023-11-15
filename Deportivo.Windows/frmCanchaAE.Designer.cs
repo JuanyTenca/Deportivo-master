@@ -40,36 +40,42 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 61);
+            this.label2.Location = new System.Drawing.Point(55, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cancha:";
             // 
             // txtCancha
             // 
-            this.txtCancha.Location = new System.Drawing.Point(129, 58);
+            this.txtCancha.Location = new System.Drawing.Point(108, 26);
             this.txtCancha.Name = "txtCancha";
-            this.txtCancha.Size = new System.Drawing.Size(196, 26);
+            this.txtCancha.Size = new System.Drawing.Size(217, 20);
             this.txtCancha.TabIndex = 1;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(46, 127);
+            this.btnOK.Image = global::Deportivo.Windows.Properties.Resources.ok;
+            this.btnOK.Location = new System.Drawing.Point(46, 95);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(126, 46);
+            this.btnOK.Size = new System.Drawing.Size(126, 54);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(199, 127);
+            this.btnCancelar.Image = global::Deportivo.Windows.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(199, 95);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(126, 46);
+            this.btnCancelar.Size = new System.Drawing.Size(126, 54);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // errorProvider1
             // 
@@ -77,13 +83,13 @@
             // 
             // frmCanchaAE
             // 
-            this.ClientSize = new System.Drawing.Size(376, 221);
+            this.ClientSize = new System.Drawing.Size(382, 176);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtCancha);
             this.Controls.Add(this.label2);
-            this.MaximumSize = new System.Drawing.Size(398, 277);
-            this.MinimumSize = new System.Drawing.Size(398, 277);
+            this.MaximumSize = new System.Drawing.Size(398, 215);
+            this.MinimumSize = new System.Drawing.Size(398, 215);
             this.Name = "frmCanchaAE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

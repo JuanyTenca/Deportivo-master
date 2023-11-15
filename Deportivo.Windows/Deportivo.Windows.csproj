@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBuscarPorLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPorLocalidad.Designer.cs">
+      <DependentUpon>frmBuscarPorLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarNombre.Designer.cs">
+      <DependentUpon>frmBuscarNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarRol.Designer.cs">
+      <DependentUpon>frmBuscarRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarLocalidad.Designer.cs">
+      <DependentUpon>frmBuscarLocalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCanchaAE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +93,12 @@
     </Compile>
     <Compile Include="frmCuotaAE.Designer.cs">
       <DependentUpon>frmCuotaAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicioAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicioAE.Designer.cs">
+      <DependentUpon>frmServicioAE.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSocioAE.cs">
       <SubType>Form</SubType>
@@ -99,12 +129,6 @@
     </Compile>
     <Compile Include="frmReservas.Designer.cs">
       <DependentUpon>frmReservas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmServicioAE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmServicioAE.Designer.cs">
-      <DependentUpon>frmServicioAE.cs</DependentUpon>
     </Compile>
     <Compile Include="frmServicios.cs">
       <SubType>Form</SubType>
@@ -153,6 +177,18 @@
     <Compile Include="Helpers\GridHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBuscarPorLocalidad.resx">
+      <DependentUpon>frmBuscarPorLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarNombre.resx">
+      <DependentUpon>frmBuscarNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarRol.resx">
+      <DependentUpon>frmBuscarRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarLocalidad.resx">
+      <DependentUpon>frmBuscarLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCanchaAE.resx">
       <DependentUpon>frmCanchaAE.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCuotaAE.resx">
       <DependentUpon>frmCuotaAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicioAE.resx">
+      <DependentUpon>frmServicioAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSocioAE.resx">
       <DependentUpon>frmSocioAE.cs</DependentUpon>
@@ -179,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReservas.resx">
       <DependentUpon>frmReservas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmServicioAE.resx">
-      <DependentUpon>frmServicioAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServicios.resx">
       <DependentUpon>frmServicios.cs</DependentUpon>
@@ -308,6 +344,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ultimapag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -27,7 +27,8 @@ namespace Deportivo.Windows
 
         int? localidadFiltro = null;
         List<SocioListDto> lista;
-        bool filterOn = false;
+        bool filtroOn = false;
+
 
         public frmSocios()
         {
@@ -70,10 +71,10 @@ namespace Deportivo.Windows
         private void MostrarDatosEnGrilla()
         {
             GridHelper.LimpiarGrilla(dgvDatos);
-            foreach (var pais in lista)
+            foreach (var socio in lista)
             {
                 DataGridViewRow r = GridHelper.ConstruirFila(dgvDatos);
-                GridHelper.SetearFila(r, pais);
+                GridHelper.SetearFila(r, socio);
                 GridHelper.AgregarFila(dgvDatos, r);
             }
             lblRegistros.Text = registros.ToString();
@@ -166,6 +167,52 @@ namespace Deportivo.Windows
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void porNombreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+
+        }
+
+     
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnPrimero_Click(object sender, EventArgs e)
+        {
+            paginaActual = 1;
+            MostrarPaginado();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (paginaActual == 1)
+            {
+                return;
+            }
+            paginaActual--;
+            MostrarPaginado();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (paginaActual == paginas)
+            {
+                return;
+            }
+            paginaActual++;
+            MostrarPaginado();
+        }
+
+        private void btnUltima_Click(object sender, EventArgs e)
+        {
+
+            paginaActual = paginas;
+            MostrarPaginado();
         }
     }
 }

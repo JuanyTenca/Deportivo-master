@@ -19,7 +19,7 @@ namespace Deportivo.Entidades.Entidades
 
         public int LocalidadId { get; set; }
 
-        public Localidad Localidad { get; set; }
+        //public Localidad Localidad { get; set; }
 
         public string NroTelefono { get; set; }
 

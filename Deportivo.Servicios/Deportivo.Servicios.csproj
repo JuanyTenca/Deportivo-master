@@ -42,10 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IServicioCanchas.cs" />
+    <Compile Include="Interfaces\IServicioEmpleados.cs" />
     <Compile Include="Interfaces\IServicioLocalidades.cs" />
+    <Compile Include="Interfaces\IServicioRoles.cs" />
     <Compile Include="Interfaces\IServicioSocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\ServicioCanchas.cs" />
+    <Compile Include="Servicio\ServicioEmpleados.cs" />
     <Compile Include="Servicio\ServicioLocalidades.cs" />
+    <Compile Include="Servicio\ServicioRoles.cs" />
     <Compile Include="Servicio\ServicioSocios.cs" />
   </ItemGroup>
   <ItemGroup>

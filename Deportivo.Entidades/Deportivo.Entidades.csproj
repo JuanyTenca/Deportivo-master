@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\Empleado\EmpleadoListDto.cs" />
     <Compile Include="Dtos\Socio\SocioListDto.cs" />
+    <Compile Include="Entidades\Cancha.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Localidad.cs" />
+    <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Socio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

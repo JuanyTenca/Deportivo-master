@@ -67,10 +67,10 @@ namespace Deportivo.Windows
         private void MostrarDatosEnGrilla()
         {
             GridHelper.LimpiarGrilla(dgvDatos);
-            foreach (var pais in lista)
+            foreach (var localidad in lista)
             {
                 DataGridViewRow r = GridHelper.ConstruirFila(dgvDatos);
-                GridHelper.SetearFila(r, pais);
+                GridHelper.SetearFila(r, localidad);
                 GridHelper.AgregarFila(dgvDatos, r);
             }
             lblRegistros.Text = registros.ToString();
@@ -80,7 +80,7 @@ namespace Deportivo.Windows
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmLocalidadAE frm = new frmLocalidadAE(_servicio) { Text = "Agregar localidad" };
+            frmLocalidadAE frm = new frmLocalidadAE(_servicio) { Text = "Agregar Localidad" };
             DialogResult dr = frm.ShowDialog(this);
             RecargarGrilla();
         }
@@ -95,7 +95,7 @@ namespace Deportivo.Windows
             Localidad localidad = (Localidad)r.Tag;
             try
             {
-                //TODO: Se debe controlar que no este relacionado
+               
                 DialogResult dr = MessageBox.Show("¿Desea borrar el registro seleccionado?",
                     "Confirmar",
                     MessageBoxButtons.YesNo,
@@ -106,7 +106,7 @@ namespace Deportivo.Windows
                 {
                     _servicio.Borrar(localidad.LocalidadId);
                     GridHelper.QuitarFila(dgvDatos, r);
-                    //lblCantidad.Text = _servicio.GetCantidad().ToString();
+                    
                     MessageBox.Show("Registro borrado", "Mensaje",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -125,6 +125,7 @@ namespace Deportivo.Windows
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+            RecargarGrilla();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -164,6 +165,82 @@ namespace Deportivo.Windows
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (!filtroOn)
+            {
+                frmBuscarLocalidad frm = new frmBuscarLocalidad() { Text = "Buscar por Nombre de la Localidad" };
+                DialogResult dr = frm.ShowDialog(this);
+                if (dr == DialogResult.Cancel)
+                {
+                    return;
+                }
+                try
+                {
+                    textoFiltro = frm.GetTexto();
+                    btnBuscar.BackColor = Color.Aquamarine;
+                    filtroOn = true;
+                    lista = _servicio.GetLocalidades(textoFiltro);
+                    registros = _servicio.GetCantidad(textoFiltro);
+                    paginas = FormHelper.CalcularPaginas(registros, registrosPorPagina);
+                    MostrarDatosEnGrilla();
+                    
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Quite el filtro activo!!!", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+         
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            filtroOn = false;
+            btnBuscar.BackColor = Color.White;
+            textoFiltro = null;
+            RecargarGrilla();
+        }
+
+        private void btnPrimero_Click(object sender, EventArgs e)
+        {
+            paginaActual = 1;
+            MostrarPaginado();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (paginaActual == 1)
+            {
+                return;
+            }
+            paginaActual--;
+            MostrarPaginado();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (paginaActual == paginas)
+            {
+                return;
+            }
+            paginaActual++;
+            MostrarPaginado();
+        }
+
+        private void btnUltima_Click(object sender, EventArgs e)
+        {
+            paginaActual = paginas;
+            MostrarPaginado();
         }
     }
 }

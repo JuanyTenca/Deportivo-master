@@ -36,6 +36,8 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.txtCuota = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbSocio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(42, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mes:";
             // 
@@ -52,25 +54,29 @@
             // 
             this.txtMes.Location = new System.Drawing.Point(101, 28);
             this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(224, 26);
+            this.txtMes.Size = new System.Drawing.Size(224, 20);
             this.txtMes.TabIndex = 1;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(46, 127);
+            this.btnOK.Image = global::Deportivo.Windows.Properties.Resources.ok;
+            this.btnOK.Location = new System.Drawing.Point(45, 180);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(126, 46);
+            this.btnOK.Size = new System.Drawing.Size(126, 55);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(199, 127);
+            this.btnCancelar.Image = global::Deportivo.Windows.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(198, 180);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(126, 46);
+            this.btnCancelar.Size = new System.Drawing.Size(126, 55);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // errorProvider1
@@ -82,7 +88,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(42, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Cuota:";
             // 
@@ -90,14 +96,33 @@
             // 
             this.txtCuota.Location = new System.Drawing.Point(101, 75);
             this.txtCuota.Name = "txtCuota";
-            this.txtCuota.Size = new System.Drawing.Size(224, 26);
+            this.txtCuota.Size = new System.Drawing.Size(224, 20);
             this.txtCuota.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Socio:";
+            // 
+            // cbSocio
+            // 
+            this.cbSocio.FormattingEnabled = true;
+            this.cbSocio.Location = new System.Drawing.Point(101, 125);
+            this.cbSocio.Name = "cbSocio";
+            this.cbSocio.Size = new System.Drawing.Size(223, 21);
+            this.cbSocio.TabIndex = 3;
             // 
             // frmCuotaAE
             // 
-            this.ClientSize = new System.Drawing.Size(376, 221);
+            this.ClientSize = new System.Drawing.Size(382, 238);
+            this.Controls.Add(this.cbSocio);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCuota);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMes);
@@ -121,5 +146,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox txtCuota;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbSocio;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -15,5 +15,8 @@ namespace Deportivo.Comun
         void Rollback();
         IRepositorioLocalidades Localidades { get; }
         IRepositorioSocios Socios { get; }
+        IRepositorioRoles Roles { get; }
+        IRepositorioEmpleados Empleados { get; }    
+        IRepositorioCanchas Canchas { get; }
     }
 }

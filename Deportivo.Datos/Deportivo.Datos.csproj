@@ -46,7 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\RepositorioCanchas.cs" />
+    <Compile Include="Repositorios\RepositorioEmpleados.cs" />
     <Compile Include="Repositorios\RepositorioLocalidades.cs" />
+    <Compile Include="Repositorios\RepositorioRoles.cs" />
     <Compile Include="Repositorios\RepositorioSocios.cs" />
     <Compile Include="UnitofWork.cs" />
   </ItemGroup>

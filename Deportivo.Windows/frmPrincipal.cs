@@ -33,5 +33,51 @@ namespace Deportivo.Windows
             frmSocios frm = new frmSocios();
             frm.ShowDialog();
         }
+
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            frmRoles frm = new frmRoles();
+            frm.ShowDialog();
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            frmEmpleados frm = new frmEmpleados();
+            frm.ShowDialog();
+        }
+
+        private void btnCanchas_Click(object sender, EventArgs e)
+        {
+            frmCanchas frm = new frmCanchas();
+            frm.ShowDialog();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            frmServicios frm = new frmServicios();
+            frm.ShowDialog();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCuotas_Click(object sender, EventArgs e)
+        {
+            frmCuotas frm = new frmCuotas();
+            frm.ShowDialog();
+        }
+
+        private void btnReservas_Click(object sender, EventArgs e)
+        {
+            frmReservas frm = new frmReservas();
+            frm.ShowDialog();
+        }
     }
 }

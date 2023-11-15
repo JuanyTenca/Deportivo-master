@@ -17,8 +17,14 @@ namespace Deportivo.Datos
         private IDbTransaction _transaction;
 
         public IRepositorioLocalidades Localidades { get; }
+
+        public IRepositorioRoles Roles { get; }
      
         public IRepositorioSocios Socios { get; }
+
+        public IRepositorioEmpleados Empleados { get; } 
+
+        public IRepositorioCanchas Canchas { get; }
 
         public UnitofWork(string cadenaConexion)
         {
@@ -31,6 +37,8 @@ namespace Deportivo.Datos
             _connection.Open();
             _transaction = _connection.BeginTransaction();
             Socios = new RepositorioSocios(_transaction);
+            Empleados = new RepositorioEmpleados(_transaction);
+           
 
         }
 

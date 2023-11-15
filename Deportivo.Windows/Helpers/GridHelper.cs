@@ -1,4 +1,5 @@
-﻿using Deportivo.Entidades.Dtos.Socio;
+﻿using Deportivo.Entidades.Dtos.Empleado;
+using Deportivo.Entidades.Dtos.Socio;
 using Deportivo.Entidades.Entidades;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,20 @@ namespace Deportivo.Windows.Helpers
                     r.Cells[2].Value = socio.NombreLocalidad;
                     r.Cells[3].Value = socio.NroTelefono;
                     r.Cells[4].Value = socio.Email;
+                    break;
+                case Rol rol:
+                    r.Cells[0].Value = rol.Descripcion;
+                    break;
+                case EmpleadoListDto empleado:
+                    r.Cells[0].Value = $"{empleado.Apellido}, {empleado.Nombre}";
+                    r.Cells[1].Value = empleado.NroDocumento;
+                    r.Cells[2].Value = empleado.NombreLocalidad;
+                    r.Cells[3].Value = empleado.NombreRol;
+                    r.Cells[4].Value = empleado.NroTelefono;
+                    r.Cells[5].Value = empleado.Email;
+                    break;
+                case Cancha cancha:
+                    r.Cells[0].Value = cancha.NombreCancha;
                     break;
 
             }

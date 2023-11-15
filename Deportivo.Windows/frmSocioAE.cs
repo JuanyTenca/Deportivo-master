@@ -37,7 +37,8 @@ namespace Deportivo.Windows
                 txtNombre.Text = socio.Nombre;
                 txtApellido.Text = socio.Apellido;
                 txtDocumento.Text = socio.NroDocumento.ToString();
-                cbLocalidad.SelectedValue = socio.Localidad;
+                //cbLocalidad.SelectedValue = socio.Localidad;
+                cbLocalidad.SelectedValue = socio.LocalidadId;
                 txtTelefono.Text = socio.NroTelefono;
                 txtCorreo.Text = socio.Email;
             }
@@ -78,7 +79,7 @@ namespace Deportivo.Windows
                 socio.NroDocumento = txtDocumento.Text;
                 socio.NroTelefono = txtTelefono.Text;
                 socio.Email = txtCorreo.Text;
-                socio.Localidad = (Localidad)cbLocalidad.SelectedItem;
+                //socio.Localidad = (Localidad)cbLocalidad.SelectedItem;
                 socio.LocalidadId = (int)cbLocalidad.SelectedValue;
 
 
@@ -143,8 +144,7 @@ namespace Deportivo.Windows
             txtApellido.Clear();
             txtDocumento.Clear();
             txtTelefono.Clear();
-            txtCorreo.Clear();
-            //cboCiudades.Items.Clear();
+            txtCorreo.Clear();      ;
             cbLocalidad.SelectedIndex = 0;
             txtNombre.Focus();
         }

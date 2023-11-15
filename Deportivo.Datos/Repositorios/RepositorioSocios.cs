@@ -48,8 +48,7 @@ namespace Deportivo.Datos.Repositorios
         {
             string updateQuery = @"UPDATE Socios SET Nombre=@Nombre,
                             Apellido=@Apellido, NroDocumento=@NroDocumento, 
-                            LocalidadId=@LocalidadId, NroTelefono=@NroTelefono, 
-                            Email=@Email,                         
+                            LocalidadId=@LocalidadId, NroTelefono=@NroTelefono, Email=@Email                         
                             WHERE SocioId=@SocioId";
 
             _transaction.Connection.Execute(updateQuery, transaction: _transaction);
@@ -72,12 +71,12 @@ namespace Deportivo.Datos.Repositorios
                 selectQuery = @"SELECT COUNT(*) FROM Socios 
                             WHERE Nombre=@Nombre AND Apellido=@Apellido";
                 cantidad = _transaction.Connection.ExecuteScalar<int>(
-                    selectQuery, new { Nombre = socio.Nombre, Apellido = socio.Apellido }, transaction: _transaction);
+                    selectQuery, new { Nombre = socio.Nombre, Apellido = socio.Apellido}, transaction: _transaction);
             }
             else
             {
                 selectQuery = @"SELECT COUNT(*) FROM Socios 
-                WHERE Nombre=@Nombre AND Apellido=@Apellido AND SocioId=@SocioId";
+                            WHERE Nombre=@Nombre AND Apellido=@Apellido AND SocioId=@SocioId";
                 cantidad = _transaction.Connection.ExecuteScalar<int>(
                     selectQuery, new { Nombre = socio.Nombre, Apellido = socio.Apellido, SocioId = socio.SocioId }, transaction: _transaction);
 
@@ -157,7 +156,7 @@ namespace Deportivo.Datos.Repositorios
             
             else
             {
-                string selectQuery = @"SELECT SocioId, Nombre, Apellido, NroDocumento, NombreLocalidad, NroTelefono, Email 
+                string selectQuery = @"SELECT SocioId, Nombre, Apellido, NroDocumento, LocalidadId, NroTelefono, Email 
                     FROM Socios INNER JOIN Localidades ON Socios.LocalidadId=Localidades.LocalidadId
                     WHERE Socios.LocalidadId=@LocalidadId
                     ORDER BY Apellido, Nombre

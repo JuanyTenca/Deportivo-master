@@ -40,36 +40,42 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 61);
+            this.label2.Location = new System.Drawing.Point(44, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Servicio:";
             // 
             // txtServicio
             // 
-            this.txtServicio.Location = new System.Drawing.Point(116, 58);
+            this.txtServicio.Location = new System.Drawing.Point(98, 31);
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(196, 26);
+            this.txtServicio.Size = new System.Drawing.Size(244, 20);
             this.txtServicio.TabIndex = 1;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(46, 127);
+            this.btnOK.Image = global::Deportivo.Windows.Properties.Resources.ok;
+            this.btnOK.Location = new System.Drawing.Point(47, 90);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(126, 46);
+            this.btnOK.Size = new System.Drawing.Size(126, 53);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(199, 127);
+            this.btnCancelar.Image = global::Deportivo.Windows.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(200, 90);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(126, 46);
+            this.btnCancelar.Size = new System.Drawing.Size(126, 53);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // errorProvider1
             // 
@@ -77,13 +83,13 @@
             // 
             // frmServicioAE
             // 
-            this.ClientSize = new System.Drawing.Size(376, 221);
+            this.ClientSize = new System.Drawing.Size(382, 178);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtServicio);
             this.Controls.Add(this.label2);
-            this.MaximumSize = new System.Drawing.Size(398, 277);
-            this.MinimumSize = new System.Drawing.Size(398, 277);
+            this.MaximumSize = new System.Drawing.Size(398, 217);
+            this.MinimumSize = new System.Drawing.Size(398, 217);
             this.Name = "frmServicioAE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

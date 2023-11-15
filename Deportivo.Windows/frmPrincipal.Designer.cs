@@ -44,7 +44,7 @@
             // btnReservas
             // 
             this.btnReservas.Image = global::Deportivo.Windows.Properties.Resources.reservas;
-            this.btnReservas.Location = new System.Drawing.Point(220, 321);
+            this.btnReservas.Location = new System.Drawing.Point(310, 321);
             this.btnReservas.Name = "btnReservas";
             this.btnReservas.Size = new System.Drawing.Size(135, 73);
             this.btnReservas.TabIndex = 0;
@@ -52,11 +52,12 @@
             this.btnReservas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // btnCuotas
             // 
             this.btnCuotas.Image = global::Deportivo.Windows.Properties.Resources.cuotas1;
-            this.btnCuotas.Location = new System.Drawing.Point(37, 321);
+            this.btnCuotas.Location = new System.Drawing.Point(128, 321);
             this.btnCuotas.Name = "btnCuotas";
             this.btnCuotas.Size = new System.Drawing.Size(135, 73);
             this.btnCuotas.TabIndex = 0;
@@ -64,11 +65,12 @@
             this.btnCuotas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCuotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCuotas.UseVisualStyleBackColor = true;
+            this.btnCuotas.Click += new System.EventHandler(this.btnCuotas_Click);
             // 
             // btnSocios
             // 
             this.btnSocios.Image = global::Deportivo.Windows.Properties.Resources.socios;
-            this.btnSocios.Location = new System.Drawing.Point(37, 231);
+            this.btnSocios.Location = new System.Drawing.Point(128, 231);
             this.btnSocios.Name = "btnSocios";
             this.btnSocios.Size = new System.Drawing.Size(135, 73);
             this.btnSocios.TabIndex = 0;
@@ -89,6 +91,7 @@
             this.btnCanchas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCanchas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCanchas.UseVisualStyleBackColor = true;
+            this.btnCanchas.Click += new System.EventHandler(this.btnCanchas_Click);
             // 
             // btnEmpleados
             // 
@@ -101,11 +104,12 @@
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Image = global::Deportivo.Windows.Properties.Resources.salir;
-            this.btnSalir.Location = new System.Drawing.Point(572, 399);
+            this.btnSalir.Location = new System.Drawing.Point(400, 412);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(135, 73);
             this.btnSalir.TabIndex = 0;
@@ -118,7 +122,7 @@
             // btnProductos
             // 
             this.btnProductos.Image = global::Deportivo.Windows.Properties.Resources.productos;
-            this.btnProductos.Location = new System.Drawing.Point(400, 231);
+            this.btnProductos.Location = new System.Drawing.Point(400, 142);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(135, 73);
             this.btnProductos.TabIndex = 0;
@@ -126,11 +130,12 @@
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnRoles
             // 
             this.btnRoles.Image = global::Deportivo.Windows.Properties.Resources.empleados;
-            this.btnRoles.Location = new System.Drawing.Point(220, 231);
+            this.btnRoles.Location = new System.Drawing.Point(310, 231);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Size = new System.Drawing.Size(135, 73);
             this.btnRoles.TabIndex = 0;
@@ -138,11 +143,12 @@
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRoles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnRoles.UseVisualStyleBackColor = true;
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
             // btnVentas
             // 
             this.btnVentas.Image = global::Deportivo.Windows.Properties.Resources.ventas;
-            this.btnVentas.Location = new System.Drawing.Point(400, 142);
+            this.btnVentas.Location = new System.Drawing.Point(400, 53);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(135, 73);
             this.btnVentas.TabIndex = 0;
@@ -150,6 +156,7 @@
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnServicios
             // 
@@ -162,6 +169,7 @@
             this.btnServicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnServicios.UseVisualStyleBackColor = true;
+            this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
             // 
             // btnLocalidades
             // 
@@ -180,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 497);
+            this.ClientSize = new System.Drawing.Size(576, 497);
             this.Controls.Add(this.btnReservas);
             this.Controls.Add(this.btnCuotas);
             this.Controls.Add(this.btnSocios);
@@ -192,8 +200,8 @@
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnServicios);
             this.Controls.Add(this.btnLocalidades);
-            this.MaximumSize = new System.Drawing.Size(763, 536);
-            this.MinimumSize = new System.Drawing.Size(763, 536);
+            this.MaximumSize = new System.Drawing.Size(592, 536);
+            this.MinimumSize = new System.Drawing.Size(592, 536);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.ResumeLayout(false);

@@ -29,5 +29,21 @@ namespace Deportivo.Windows.Helpers
             combo.SelectedIndex = 0;
         }
 
+        public static void CargarComboRoles(ref ComboBox combo)
+        {
+            IServicioRoles servicioRoles = new ServicioRoles();
+            var lista = servicioRoles.GetRoles(null);
+            var defaultRol = new Rol()
+            {
+                RolId = 0,
+                Descripcion = "Seleccione Rol"
+            };
+            lista.Insert(0, defaultRol);
+            combo.DataSource = lista;
+            combo.DisplayMember = "Descripcion";
+            combo.ValueMember = "RolId";
+            combo.SelectedIndex = 0;
+        }
+
     }
 }

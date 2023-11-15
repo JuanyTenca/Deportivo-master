@@ -17,7 +17,7 @@ namespace Deportivo.Servicios.Interfaces
         int GetCantidad(string textoFiltro);
         List<Localidad> GetLocalidades(string textoFiltro);
         List<Localidad> GetLocalidadesPorPagina(int cantidad, int paginaActual, string textoFiltro);
-        Localidad GetLocalidadPorId(int paisId);
+        Localidad GetLocalidadPorId(int localidadId);
     }
 
 }

@@ -58,14 +58,18 @@
             // dgvDatos
             // 
             this.dgvDatos.AllowUserToAddRows = false;
+            this.dgvDatos.AllowUserToResizeColumns = false;
+            this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colLocalidad});
             this.dgvDatos.Location = new System.Drawing.Point(12, 62);
+            this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.RowHeadersWidth = 62;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(776, 334);
             this.dgvDatos.TabIndex = 0;
             // 
@@ -146,6 +150,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(46, 51);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnActualizar
             // 
@@ -156,6 +161,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(63, 51);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -253,6 +259,7 @@
             this.btnUltima.Size = new System.Drawing.Size(90, 35);
             this.btnUltima.TabIndex = 65;
             this.btnUltima.UseVisualStyleBackColor = true;
+            this.btnUltima.Click += new System.EventHandler(this.btnUltima_Click);
             // 
             // btnSiguiente
             // 
@@ -262,6 +269,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(90, 35);
             this.btnSiguiente.TabIndex = 65;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -271,6 +279,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(90, 35);
             this.btnAnterior.TabIndex = 65;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnPrimero
             // 
@@ -280,6 +289,7 @@
             this.btnPrimero.Size = new System.Drawing.Size(90, 35);
             this.btnPrimero.TabIndex = 65;
             this.btnPrimero.UseVisualStyleBackColor = true;
+            this.btnPrimero.Click += new System.EventHandler(this.btnPrimero_Click);
             // 
             // frmLocalidades
             // 

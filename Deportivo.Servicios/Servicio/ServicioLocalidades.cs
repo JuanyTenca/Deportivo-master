@@ -96,11 +96,11 @@ namespace Deportivo.Servicios.Servicio
             }
         }
 
-        public Localidad GetLocalidadPorId(int paisId)
+        public Localidad GetLocalidadPorId(int localidadId)
         {
             try
             {
-                return _repositorio.GetLocalidadPorId(paisId);
+                return _repositorio.GetLocalidadPorId(localidadId);
             }
             catch (Exception)
             {

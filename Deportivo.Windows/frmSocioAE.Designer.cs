@@ -65,21 +65,25 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(46, 264);
+            this.btnOK.Image = global::Deportivo.Windows.Properties.Resources.ok;
+            this.btnOK.Location = new System.Drawing.Point(46, 221);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(126, 46);
+            this.btnOK.Size = new System.Drawing.Size(126, 53);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(660, 264);
+            this.btnCancelar.Image = global::Deportivo.Windows.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(660, 221);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(126, 46);
+            this.btnCancelar.Size = new System.Drawing.Size(126, 53);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -170,7 +174,7 @@
             // 
             // frmSocioAE
             // 
-            this.ClientSize = new System.Drawing.Size(824, 358);
+            this.ClientSize = new System.Drawing.Size(824, 325);
             this.Controls.Add(this.cbLocalidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOK);
@@ -185,8 +189,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
-            this.MaximumSize = new System.Drawing.Size(840, 397);
-            this.MinimumSize = new System.Drawing.Size(840, 397);
+            this.MaximumSize = new System.Drawing.Size(840, 364);
+            this.MinimumSize = new System.Drawing.Size(840, 364);
             this.Name = "frmSocioAE";
             this.Load += new System.EventHandler(this.frmSocioAE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

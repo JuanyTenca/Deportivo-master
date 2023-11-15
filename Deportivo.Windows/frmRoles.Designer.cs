@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnBorrar = new System.Windows.Forms.ToolStripButton();
@@ -50,7 +51,6 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimero = new System.Windows.Forms.Button();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,17 +58,28 @@
             // dgvDatos
             // 
             this.dgvDatos.AllowUserToAddRows = false;
+            this.dgvDatos.AllowUserToResizeColumns = false;
+            this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDescripcion});
-            this.dgvDatos.Location = new System.Drawing.Point(18, 95);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvDatos.Location = new System.Drawing.Point(12, 62);
+            this.dgvDatos.MultiSelect = false;
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.RowHeadersWidth = 62;
-            this.dgvDatos.Size = new System.Drawing.Size(1164, 514);
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDatos.Size = new System.Drawing.Size(776, 334);
             this.dgvDatos.TabIndex = 0;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.MinimumWidth = 8;
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -86,8 +97,8 @@
             this.btnCerrar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1200, 66);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(804, 54);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -97,10 +108,11 @@
             this.btnNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(68, 61);
+            this.btnNuevo.Size = new System.Drawing.Size(46, 51);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBorrar
             // 
@@ -108,9 +120,10 @@
             this.btnBorrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBorrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(64, 61);
+            this.btnBorrar.Size = new System.Drawing.Size(43, 51);
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
@@ -118,14 +131,15 @@
             this.btnEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(61, 61);
+            this.btnEditar.Size = new System.Drawing.Size(41, 51);
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 66);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
             // 
             // btnBuscar
             // 
@@ -133,9 +147,10 @@
             this.btnBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(67, 61);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 51);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnActualizar
             // 
@@ -143,14 +158,15 @@
             this.btnActualizar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnActualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(92, 61);
+            this.btnActualizar.Size = new System.Drawing.Size(63, 51);
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 66);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
             // 
             // btnImprimir
             // 
@@ -158,14 +174,14 @@
             this.btnImprimir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(84, 61);
+            this.btnImprimir.Size = new System.Drawing.Size(57, 51);
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 66);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 54);
             // 
             // btnCerrar
             // 
@@ -173,28 +189,27 @@
             this.btnCerrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(63, 61);
+            this.btnCerrar.Size = new System.Drawing.Size(43, 51);
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblPaginas
             // 
             this.lblPaginas.AutoSize = true;
             this.lblPaginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaginas.Location = new System.Drawing.Point(315, 666);
-            this.lblPaginas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaginas.Location = new System.Drawing.Point(210, 433);
             this.lblPaginas.Name = "lblPaginas";
-            this.lblPaginas.Size = new System.Drawing.Size(19, 20);
+            this.lblPaginas.Size = new System.Drawing.Size(14, 13);
             this.lblPaginas.TabIndex = 62;
             this.lblPaginas.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(264, 666);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(176, 433);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 20);
+            this.label4.Size = new System.Drawing.Size(19, 13);
             this.label4.TabIndex = 59;
             this.label4.Text = "de";
             // 
@@ -202,20 +217,18 @@
             // 
             this.lblPaginaActual.AutoSize = true;
             this.lblPaginaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaginaActual.Location = new System.Drawing.Point(225, 666);
-            this.lblPaginaActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaginaActual.Location = new System.Drawing.Point(150, 433);
             this.lblPaginaActual.Name = "lblPaginaActual";
-            this.lblPaginaActual.Size = new System.Drawing.Size(19, 20);
+            this.lblPaginaActual.Size = new System.Drawing.Size(14, 13);
             this.lblPaginaActual.TabIndex = 63;
             this.lblPaginaActual.Text = "0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 666);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(100, 433);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 60;
             this.label2.Text = "Página:";
             // 
@@ -223,76 +236,66 @@
             // 
             this.lblRegistros.AutoSize = true;
             this.lblRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistros.Location = new System.Drawing.Point(225, 628);
-            this.lblRegistros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegistros.Location = new System.Drawing.Point(150, 408);
             this.lblRegistros.Name = "lblRegistros";
-            this.lblRegistros.Size = new System.Drawing.Size(19, 20);
+            this.lblRegistros.Size = new System.Drawing.Size(14, 13);
             this.lblRegistros.TabIndex = 64;
             this.lblRegistros.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 628);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(29, 408);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 20);
+            this.label3.Size = new System.Drawing.Size(114, 13);
             this.label3.TabIndex = 61;
             this.label3.Text = "Cantidad de Registros:";
             // 
             // btnUltima
             // 
             this.btnUltima.Image = global::Deportivo.Windows.Properties.Resources.ultimapag;
-            this.btnUltima.Location = new System.Drawing.Point(840, 628);
-            this.btnUltima.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUltima.Location = new System.Drawing.Point(560, 408);
             this.btnUltima.Name = "btnUltima";
-            this.btnUltima.Size = new System.Drawing.Size(135, 54);
+            this.btnUltima.Size = new System.Drawing.Size(90, 35);
             this.btnUltima.TabIndex = 65;
             this.btnUltima.UseVisualStyleBackColor = true;
+            this.btnUltima.Click += new System.EventHandler(this.btnUltima_Click);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.Image = global::Deportivo.Windows.Properties.Resources.pagsiguiente;
-            this.btnSiguiente.Location = new System.Drawing.Point(696, 628);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSiguiente.Location = new System.Drawing.Point(464, 408);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(135, 54);
+            this.btnSiguiente.Size = new System.Drawing.Size(90, 35);
             this.btnSiguiente.TabIndex = 65;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
             this.btnAnterior.Image = global::Deportivo.Windows.Properties.Resources.paganterior;
-            this.btnAnterior.Location = new System.Drawing.Point(552, 628);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAnterior.Location = new System.Drawing.Point(368, 408);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(135, 54);
+            this.btnAnterior.Size = new System.Drawing.Size(90, 35);
             this.btnAnterior.TabIndex = 65;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnPrimero
             // 
             this.btnPrimero.Image = global::Deportivo.Windows.Properties.Resources.primerapag;
-            this.btnPrimero.Location = new System.Drawing.Point(408, 628);
-            this.btnPrimero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPrimero.Location = new System.Drawing.Point(272, 408);
             this.btnPrimero.Name = "btnPrimero";
-            this.btnPrimero.Size = new System.Drawing.Size(135, 54);
+            this.btnPrimero.Size = new System.Drawing.Size(90, 35);
             this.btnPrimero.TabIndex = 65;
             this.btnPrimero.UseVisualStyleBackColor = true;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDescripcion.HeaderText = "Descripción";
-            this.colDescripcion.MinimumWidth = 8;
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
+            this.btnPrimero.Click += new System.EventHandler(this.btnPrimero_Click);
             // 
             // frmRoles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(804, 466);
             this.Controls.Add(this.btnUltima);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
@@ -305,11 +308,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1222, 756);
-            this.MinimumSize = new System.Drawing.Size(1222, 756);
+            this.MaximumSize = new System.Drawing.Size(820, 505);
+            this.MinimumSize = new System.Drawing.Size(820, 505);
             this.Name = "frmRoles";
             this.Text = "frmRoles";
+            this.Load += new System.EventHandler(this.frmRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
